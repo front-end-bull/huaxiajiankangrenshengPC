@@ -10,17 +10,227 @@
 			height: 5.62rem;
 			background-image:url('bg/banner.png');
 			background-size: 100% 100%;
+			position: relative;
+		}
+				.header .logo{
+					width: 0.47rem;
+					height: 0.48rem;
+					position: absolute;
+					left: 2.34rem;
+					top:0.19rem;
+				}
+				.header .big-title{
+					font-size: 0.32rem;
+					font-weight: bold;
+					position: absolute;
+					left:2.93rem;
+					top:0.3rem;
+					line-height: .32rem;
+					width: 1.28rem;
+					/*height: .32rem;*/
+				}
+			
+				.header .small-title{
+					font-size: 0.18rem;
+					position: absolute;
+					left: 4.33rem;
+					top: 0.44rem;
+					width: 1.44rem;
+					/*height: .18rem;*/
+					line-height: .18rem
+				}
+				
+				.header .anchors{
+					font-size: 0.16rem;
+					position: absolute;
+					top:0.35rem;
+				}
+
+				.header .anchors-strength{
+					left: 7.24rem;
+				}
+
+				.header .anchors-case{
+					left: 8.28rem;
+				}
+
+				.header .anchors-provision{
+					left: 9.32rem;
+				}
+
+				.header .anchors-aboutus{
+					left: 10.36rem;
+				}
+
+				.header .anchors-order{
+					left: 11.4rem;
+				}
+
+				.header .hot{
+					position: absolute;
+					width: 0.28rem;
+					height: 0.1rem;
+					left: 11.93rem;
+					top: 0.26rem;
+				}
+				
+				.header .button{
+					width: 1.56rem;
+					height: 0.44rem;
+					line-height:0.44rem;
+					background:#ffdb4d;
+					border-radius:0.02rem;
+					font-size:0.2rem;
+					color:#47b4ea;
+					letter-spacing:0.55px;
+					text-align: center;
+					font-weight: bold;
+					position: absolute;
+					left: 3.24rem;
+					top: 4.13rem;
+				}
+
+				.header .half-price{
+					position: absolute;
+					left: 8.07rem;
+					top: 1.77rem;
+					width: 3.08rem;
+					height: 2.80rem;
+				}
+
+				.header .details{
+					position: absolute;
+					width: 2.55rem;
+					height: 2.44rem;
+					left: 3.24rem;
+					top: 1.39rem;
+				}
+
+		.charts{
+			width: 100%;
+			height: 6.45rem;
+			background:#eceef3;
+			position: relative;
+		}
+
+				.charts .introduction{
+					width: 7.17rem;
+					height: 1.20rem;
+					position: absolute;
+					top: .95rem;
+					left: 3.63rem;
+					font-size:0.26rem;
+					color:#4d4d4d;
+					line-height:0.4rem;
+					text-align:center;
+				}
+
+				.charts .photograph{
+					width: 6.95rem;
+					height: 2.40rem;
+					position: absolute;
+					left: 3.72rem;
+					top: 3.05rem;
+				}
+
+
+		.strength{
+			width: 100%;
+			height: 1410px;
+			position: relative;
+			background:#f7f9fa;
+		}	
+		
+		.strength .title{
+			width: 100%;
+			font-size:.34rem;
+			line-height:.34rem;
+			color:#4d4d4d;
+			letter-spacing:0.005rem;
+			text-align:center;
+			position: absolute;
+			top: .7rem;
+		}
+		
+
+		.strength .strength-title{
+			font-size: 0.26rem;
+			padding-left: 0.17rem;
+			border-left: 3px solid #33bbff;
+			position: absolute;
+			left: 2.44rem;
+			top: 1.55rem;
+			color:#4d4d4d;
+		}
+
+		.strength .strength-chart{
+			width: 2.46rem;
+			height: 3.48rem;
+			position: absolute;
+			top: 2.09rem;
+		}
+
+		.strength .strength-chart1{
+			left: 2.26rem;
+		}
+
+		.strength .strength-chart2{
+			left: 4.73rem;
+		}
+
+		.strength .strength-chart3{
+			left: 7.19rem;
+		}
+
+		.strength .strength-chart4{
+			left: 9.66rem;
 		}
 	</style>
 	<script src="js/jquery.min.js"></script>
 	<script>
-		
+		$(window).resize(function(){
+			var deviceWidth = $(window).width()
+			var fontSize = deviceWidth / 1440 * 100 + 'px'
+			$('html').css('font-size',fontSize)
+		});
 	</script>
 </head>
 <body>
 	<div class="header">
-		
+		<img src="img/logo.png" alt="" class="logo">
+		<div class="big-title">保险神器</div>
+		<div class="small-title">您的贴身保险顾问</div>
+		<div class="anchors anchors-strength">产品优势</div>
+		<div class="anchors anchors-case">投保案例</div>
+		<div class="anchors anchors-provision">条款查看</div>
+		<div class="anchors anchors-aboutus">关于我们</div>
+		<div class="anchors anchors-order">一键预约</div>
+		<img src="img/hot.jpg" alt="" class="hot">
+		<div class="button">立即预约</div>
+		<img src="img/details.png" alt="" class="details">
+		<img src="img/half_price.png" alt="" class="half-price">
 	</div>
+
+	<div class="charts">
+		<div class="introduction">重疾发病率已经高达<span style="color:#fc7865;font-weight:bold;">72.18％</span>&nbsp;&nbsp;&nbsp;&nbsp;高额的治疗费用会压垮一个家庭重疾高发时代&nbsp;&nbsp;&nbsp;&nbsp;您需要的是一份高性价比&nbsp;<span style="font-size:0.32rem;font-weight:bold;color:#33bbff;">全面型保险</span><br>健康人生&nbsp;&nbsp;&nbsp;&nbsp;首年保费乐享&nbsp;<span style="color:#33bbff;font-weight:bold;font-size:0.36rem;">5折</span>&nbsp;优惠</div>
+		<img src="img/charts.png" alt="" class="photograph">
+	</div>
+	
+	<div class="strength">
+		<div class="title">
+			保费低&nbsp;&nbsp;&nbsp;&nbsp;保障全&nbsp;&nbsp;&nbsp;&nbsp;就是这么贴心
+		</div>
+
+		<div class="strength-title">
+			我们的优势
+		</div>
+
+		<img src="img/strength1.png" alt="" class="strength-chart strength-chart1">
+		<img src="img/strength2.png" alt="" class="strength-chart strength-chart2">
+		<img src="img/strength3.png" alt="" class="strength-chart strength-chart3">
+		<img src="img/strength4.png" alt="" class="strength-chart strength-chart4">
+	</div>
+
 	
 </body>
 </html>
